@@ -1,0 +1,7 @@
+# Required for data generation scripts
+numpy>=1.20.0
+
+# Optional but useful for implementation and benchmarking
+# matplotlib>=3.5.0  # For plotting benchmark results and visualizations
+# scipy>=1.7.0       # For additional math utilities (note: implement cosine similarity yourself)
+# pytest>=7.0.0     # For writing and running tests
