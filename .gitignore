@@ -22,7 +22,7 @@ env/
 
 # Data files (can be regenerated)
 data/
-output/
+output/*.pkl
 
 # OS
 .DS_Store

@@ -30,6 +30,16 @@ python -m src.query
 
 ## Results
 
-On synthetic dataset (10,000 vectors, 128-dim):
-- HNSW achieves ~90-100% Recall@10
-- 10-50x speedup vs brute force
+| Dataset | HNSW Recall@10 | Speedup |
+|---------|----------------|---------|
+| Synthetic | 94% | ~1x |
+| Fashion-MNIST | 96% | 1.19x |
+
+**Note:** With 10,000 vectors, brute force using NumPy's vectorized operations is already very fast (~0.6-0.9ms). HNSW's advantage becomes more pronounced at larger scales (100k+ vectors) where O(log n) search significantly outperforms O(n) brute force.
+
+## Graphs
+
+Generated visualizations in `output/`:
+- `speed_comparison.png` - Per-query latency comparison
+- `accuracy_comparison.png` - Recall@10 per query
+- `tradeoff_summary.png` - Speed vs accuracy tradeoff
